@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Formulario</title>
+
+		<style rel="stylesheet" type="text/css">
+    /* ========== BODY ========== */
+
+		body {
+		  font-family: sans-serif, Georgia, Times, "Times New Roman";
+		        padding: 10px 250px;
+		        font-weight: normal;
+		        color:  #202020 ;
+		}
+
+
+
+		h1 {
+		        color: #BBBBBB;
+		        letter-spacing: 10px;
+		        text-align: center;
+		        text-transform: uppercase;
+
+		}
+
+		/* ========== CONTENT ========== */
+
+
+		fieldset{
+
+		    border: dashed ;
+		    border-color: #BBBBBB;
+		    border-width: 2px thin;
+		    margin: 20px 0px;
+
+		}
+
+		legend{
+
+
+		    background: #BBBBBB;
+		    color: #FFFFFF;
+		    font-weight: bold;
+		    padding: 2px 0.2em;
+
+		}
+
+
+		ul{
+
+		    list-style-type: none;
+		    margin: 0px 5px;
+		    padding: 0px;
+
+		}
+
+		ul li{
+
+		    background: #EEEEEE;
+		    margin: 0px 10px 5px 0px;
+		    padding: 2px 10px;
+
+		}
+
+		.errorlist{
+			color: red;
+		}
+
+  </style>
+
+</head>
+
+<body>
+
+<h1>Prueba MiCaliSoft S.A.S</h1>
+<fieldset>
+  <legend>Usuarios en Base de datos</legend><br/>
+	<ul>
+	{% for usuario in usuarios %}
+	  <li> {{ usuario.usuario }} </li>
+	{% endfor %}
+	<ul>
+</fieldset>
+
+<fieldset>
+<legend>Crear Usuario Nuevo</legend><br/>
+<form action="/crear/" method="post">{% csrf_token %}
+<ul>
+
+{{ form.as_ul }}
+
+</ul>
+
+<input type="submit" name="submit" value="Agregar" style="    width: 250px;    background: #99B8FF;">
+</form>
+
+</fieldset>

@@ -1,0 +1,62 @@
+/* ========== BODY ========== */
+
+body {
+	font-family: sans-serif, Georgia, Times, "Times New Roman";
+        padding: 10px 250px;
+        font-weight: normal;
+        color:  #202020 ;
+}
+
+
+
+h1 {
+        color: #BBBBBB;
+        letter-spacing: 10px;
+        text-align: center;
+        text-transform: uppercase;
+
+}
+
+/* ========== CONTENT ========== */
+ 
+
+fieldset{
+    
+    border: dashed ;    
+    border-color: #BBBBBB;
+    border-width: 2px thin;
+    margin: 20px 0px;
+    
+}
+
+legend{
+    
+    
+    background: #BBBBBB;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 2px 0.2em;
+    
+}
+
+
+ul{
+    
+    list-style-type: none;
+    margin: 0px 5px;
+    padding: 0px;
+    
+}
+
+ul li{
+   
+    background: #EEEEEE;
+    margin: 0px 10px 5px 0px;
+    padding: 2px 10px;
+    
+}
+
+
+
+
+    
